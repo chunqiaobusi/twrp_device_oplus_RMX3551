@@ -46,6 +46,8 @@ on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
     write /sys/class/power_supply/usb/otg_switch 1
     write /sys/class/oplus_chg/usb/otg_switch 1
+    write /sys/devices/platform/msm_hsusb/gadget/usb_state 1
+    chmod 777 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
 on init
     setprop sys.usb.configfs 1
