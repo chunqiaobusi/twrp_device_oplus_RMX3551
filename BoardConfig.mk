@@ -89,7 +89,8 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libnetutils \
     libxml2 \
     vendor.display.config@1.0 \
-    vendor.display.config@2.0
+    vendor.display.config@2.0 \
+    android.hardware.vibrator-V2-ndk_platform
     
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.allocator@1.0.so \
@@ -102,8 +103,11 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libops.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libnetutils.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libqtivibratoreffect.so \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/vendor.qti.hardware.vibrator.impl.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk_platform.so
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
@@ -146,9 +150,12 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_USE_TOOLBOX := true
 TW_INCLUDE_NTFS_3G := true
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 900
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone45/temp"
+# TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery/capacity"
+TW_HAS_MTP := true
+TW_MAX_BRIGHTNESS := 4095
+TW_DEFAULT_BRIGHTNESS := 2048
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_REPACKTOOLS := true
@@ -158,10 +165,20 @@ TW_NO_FLASH_CURRENT_TWRP := true # For A/B devices that has dedicated recovery, 
 TW_NO_SCREEN_BLANK := true
 TW_LOAD_VENDOR_MODULES := true
 TW_EXTRA_LANGUAGES := true
-
-# Maintainer/Version
-TW_DEVICE_VERSION := GT2Pro
-
+# TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+# TW_USE_QCOM_HAPTICS_VIBRATOR := true
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
+# TW_USE_LEDS_HAPTICS := true
+TW_HAS_EDL_MODE := true
+# TW_Y_OFFSET := 105
+# TW_H_OFFSET := -105
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CPU_POS := 50
+TW_CUSTOM_CLOCK_POS := 320
+TW_CUSTOM_BATTERY_POS := 800
+# TW_BATTERY_SYSFS_WAIT_SECONDS := 5
+TW_DEVICE_VERSION := v3.7_kernel_t4sk
+TW_FRAMERATE := 120
 # Debugging Configs
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true

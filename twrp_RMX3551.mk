@@ -3,11 +3,11 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Product Information
-PRODUCT_DEVICE := ferrari
+PRODUCT_DEVICE := RMX3551
 PRODUCT_RELEASE_NAME := $(PRODUCT_DEVICE)
 PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
-PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme GT2 Pro
+PRODUCT_BRAND := oplus
+PRODUCT_MODEL := Realme GT2 Explorer Master
 PRODUCT_PLATFORM := taro
 PRODUCT_MANUFACTURER := Realme
 
@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from macedonia device
-$(call inherit-product, device/realme/ferrari/device.mk)
+$(call inherit-product, device/oplus/RMX3551/device.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)

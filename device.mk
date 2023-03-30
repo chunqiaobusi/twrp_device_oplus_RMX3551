@@ -2,7 +2,7 @@
 # Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
 # SPDX-License-Identifier: Apache-2.0
 
-LOCAL_PATH := device/realme/ferrari
+LOCAL_PATH := device/oplus/RMX3551
 
 # A/B Post-Instal Config
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -66,6 +66,8 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Vibrator
+
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery \
@@ -99,4 +101,4 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := RMX3300,RMX3301,RE547F,RED8AC,RED8ACL1,ossi,qssi
+TARGET_OTA_ASSERT_DEVICE := RMX3551,RE5465,ossi,qssi

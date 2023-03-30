@@ -2,7 +2,7 @@
   
 #!/usr/bin/env bash
 
-FDEVICE="ferrari"
+FDEVICE="RMX3551"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -27,14 +27,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export LC_ALL="C"
   
 # Maintaining Info
-    export OF_MAINTAINER="hoangzk9as,cd-Crypton"
+    export OF_MAINTAINER="kernel-t4sk"
     export FOX_VERSION=$(date +%y.%m.%d)
     export FOX_BUILD_TYPE=Unofficial
   	
 # Device Info
     export FOX_ARCH=arm64
     export FOX_VARIANT="12.1"
-    export TARGET_DEVICE_ALT="RMX3300,RMX3301,RE547F,RED8AC,RED8ACL1,ossi,qssi"
+    export TARGET_DEVICE_ALT="RMX3551,RE5465,ossi,qssi"
   
 # Funtions
     export FOX_REPLACE_BUSYBOX_PS=1

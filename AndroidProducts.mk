@@ -3,9 +3,9 @@
 # SPDX-License-Identifier: Apache-2.0
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_ferrari.mk
+    $(LOCAL_DIR)/twrp_RMX3551.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_ferrari-user \
-    twrp_ferrari-userdebug \
-    twrp_ferrari-eng
+    twrp_RMX3551-user \
+    twrp_RMX3551-userdebug \
+    twrp_RMX3551-eng
