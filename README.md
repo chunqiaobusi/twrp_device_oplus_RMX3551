@@ -12,7 +12,7 @@
 ### Release Notes
 * TWRP now boots, decryption is working fine but aren't tested in GSI.
 * Do not flash OTA firmware yet, it is not well-tested, could brick your device.
-* Realme GT2 Pro is Virtual A/B with dedicated Recovery Partition, no need to `boot` it like other A/Bs, just `flash` it.
+* Realme GT2 Explorer Master is Virtual A/B with dedicated Recovery Partition, no need to `boot` it like other A/Bs, just `flash` it.
 
 ### Working Features
 * Internal Storage
@@ -28,6 +28,7 @@
 * Flashing OTA.
 * Backup/Restore (...backup actually works, but restoring it not yet tested.)
 * Vibration/Haptics
+* Battery capacity
 
 ### Credits
 
