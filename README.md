@@ -1,18 +1,16 @@
 ## Custom Recovery | Device Tree
-![Realme GT2 Pro](https://github.com/cd-Spidey/Random/blob/main/screenshots/BackgroundEraser_20230222_122215170.png)
-| Device                  | Realme GT2 Pro                                          |
+![Realme GT2 Explorer Master](https://fdn2.mobgsm.com/vv/pics/realme/realme-gt2-master-explorer-03.jpg)
+| Device                  | Realme GT2 Explorer Master                                      |
 | ----------------------- | ---------------------------------------------------------|
-| SoC                     | Qualcomm SM8450 Snapdragon 8 Gen 1 (4 nm)                      |      
-| CPU                     | Octa-core (1x3.00 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510)  |
+| SoC                     | Qualcomm SM8475 Snapdragon 8+ Gen 1 (4 nm)                      |      
+| CPU                     | Octa-core (1x3.20 GHz Cortex-X2 & 3x2.75 GHz Cortex-A710 & 4x2.00 GHz Cortex-A510)  |
 | GPU                     | Adreno 730                                             |
-| Internal                | 128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM, UFS 3.1                 |
-| Model                   | RMX3301, RMX3300 |
-| Codename                | Ferrari (...official codename.) |
+| Internal                | 128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM, UFS 3.1                 |
+| Model                   | RMX3551 |
+| Codename                | Unknow (...official codename.) |
 
 ### Release Notes
 * TWRP now boots, decryption is working fine but aren't tested in GSI.
-* Necessary blobs used here are from this OTA Firmware Dump: [RMX3301_11.C.13_1130_202301091837](https://gitlab.com/firmware-dump/android_dump_oplus_RMX3301).
-* It was tested in a device running RUI 4.0 (RMX3301_11.C.13) firmware, but it should work in RUI3.0 too.
 * Do not flash OTA firmware yet, it is not well-tested, could brick your device.
 * Realme GT2 Pro is Virtual A/B with dedicated Recovery Partition, no need to `boot` it like other A/Bs, just `flash` it.
 
@@ -32,6 +30,11 @@
 * Vibration/Haptics
 
 ### Credits
+
+* [Bot-cd-Crypton](https://github.com/cd-Crypton)
+* [hoangzk9as](https://github.com/hoangzk9as)
+
+
 ```
 # Copyright (C) 2023 The Android Open Source Project
 # Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
